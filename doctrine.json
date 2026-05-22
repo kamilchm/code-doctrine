@@ -1,0 +1,26 @@
+{
+  "specVersion": 1,
+  "name": "code-doctrine",
+  "title": "Code Doctrine",
+  "author": "kamilchm",
+  "description": "A plain code doctrine skill package with focused doctrine references and a managed AGENTS section.",
+  "skillPath": ".",
+  "skillFiles": [
+    "SKILL.md",
+    "AGENTS-section.md",
+    "coding-foundations-reference.md",
+    "database-reference.md",
+    "system-architecture-reference.md",
+    "operability-reference.md",
+    "documentation-reference.md",
+    "user-interface-reference.md",
+    "change-safety-reference.md",
+    "testing-reference.md",
+    "enforcement-reference.md"
+  ],
+  "agentsSectionFile": "AGENTS-section.md",
+  "managedAgentsMarkers": {
+    "start": "<!-- code-doctrine:managed:start -->",
+    "end": "<!-- code-doctrine:managed:end -->"
+  }
+}

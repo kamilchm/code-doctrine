@@ -1,54 +1,39 @@
 {
   "name": "@kamilchm/code-doctrine",
   "version": "0.1.0",
-  "description": "Standalone code doctrine skill with OpenCode and Pi installers",
-  "publishConfig": {
-    "access": "public"
-  },
+  "description": "Plain code doctrine package published by kamilchm",
   "license": "MIT",
-  "type": "module",
   "keywords": [
-    "pi-package",
-    "agent-skill",
     "code-doctrine",
-    "opencode",
-    "pi",
-    "skills"
+    "agent-skill",
+    "skills",
+    "plain-skill"
   ],
-  "bin": {
-    "code-doctrine": "install.mjs"
-  },
-  "pi": {
-    "skills": [
-      "skills/code-doctrine/SKILL.md"
-    ]
-  },
-  "codeDoctrine": {
-    "specVersion": 1,
-    "author": "kamilchm",
-    "skillName": "code-doctrine",
-    "managedAgentsMarkers": {
-      "start": "<!-- code-doctrine:managed:start -->",
-      "end": "<!-- code-doctrine:managed:end -->"
-    },
-    "installTargets": [
-      "opencode",
-      "pi",
-      "all"
-    ]
-  },
   "files": [
-    "skills/",
-    "install.mjs",
+    "SKILL.md",
+    "AGENTS-section.md",
+    "coding-foundations-reference.md",
+    "database-reference.md",
+    "system-architecture-reference.md",
+    "operability-reference.md",
+    "documentation-reference.md",
+    "user-interface-reference.md",
+    "change-safety-reference.md",
+    "testing-reference.md",
+    "enforcement-reference.md",
+    "doctrine.json",
     "README.md",
     "LICENSE",
     "package.json"
   ],
   "scripts": {
-    "check": "node --check install.mjs"
+    "check": "node --eval \"JSON.parse(require('node:fs').readFileSync('package.json','utf8')); JSON.parse(require('node:fs').readFileSync('doctrine.json','utf8'));\""
   },
   "engines": {
     "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "repository": {
     "type": "git",
