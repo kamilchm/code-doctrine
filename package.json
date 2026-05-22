@@ -1,0 +1,61 @@
+{
+  "name": "@kamilchm/code-doctrine",
+  "version": "0.1.0",
+  "description": "Standalone code doctrine skill with OpenCode and Pi installers",
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT",
+  "type": "module",
+  "keywords": [
+    "pi-package",
+    "agent-skill",
+    "code-doctrine",
+    "opencode",
+    "pi",
+    "skills"
+  ],
+  "bin": {
+    "code-doctrine": "install.mjs"
+  },
+  "pi": {
+    "skills": [
+      "skills/code-doctrine/SKILL.md"
+    ]
+  },
+  "codeDoctrine": {
+    "specVersion": 1,
+    "author": "kamilchm",
+    "skillName": "code-doctrine",
+    "managedAgentsMarkers": {
+      "start": "<!-- code-doctrine:managed:start -->",
+      "end": "<!-- code-doctrine:managed:end -->"
+    },
+    "installTargets": [
+      "opencode",
+      "pi",
+      "all"
+    ]
+  },
+  "files": [
+    "skills/",
+    "install.mjs",
+    "README.md",
+    "LICENSE",
+    "package.json"
+  ],
+  "scripts": {
+    "check": "node --check install.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kamilchm/code-doctrine.git"
+  },
+  "homepage": "https://github.com/kamilchm/code-doctrine",
+  "bugs": {
+    "url": "https://github.com/kamilchm/code-doctrine/issues"
+  }
+}
