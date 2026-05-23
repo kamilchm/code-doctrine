@@ -57,7 +57,8 @@ npm pack --dry-run
 ## Publishing
 
 This repo includes a GitHub Actions publish workflow in `.github/workflows/publish.yml`.
-Provide an `NPM_TOKEN` repository secret, then publish via GitHub release or manual workflow dispatch.
+It is configured for npm trusted publishing via GitHub OIDC, so no `NPM_TOKEN` secret is required.
+Publish via GitHub release or manual workflow dispatch.
 
 ## License
 
