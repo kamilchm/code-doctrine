@@ -11,6 +11,7 @@
   ],
   "files": [
     "skill",
+    "AGENTS-section.md",
     "doctrine.json",
     "README.md",
     "LICENSE",
