@@ -64,6 +64,12 @@ The workflow uses the GitHub Actions environment named `npm`, which should also 
 It also clears `NODE_AUTH_TOKEN` in the publish step to avoid `actions/setup-node` interfering with npm OIDC trusted publishing.
 Publish via GitHub release or manual workflow dispatch.
 
+## More details
+
+For the full story behind this doctrine — why it exists, how it evolved, and how local customization fits in — read the announcement article:
+
+- [Code Doctrine: The Reusable Version of My AI Coding Constitution](https://kamil.chm.ski/code-doctrine-the-reusable-version-of-my-ai-coding-constitution)
+
 ## License
 
 MIT
