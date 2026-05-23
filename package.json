@@ -1,6 +1,6 @@
 {
   "name": "@kamilchm/code-doctrine",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Plain code doctrine package published by kamilchm",
   "license": "MIT",
   "keywords": [
@@ -10,17 +10,7 @@
     "plain-skill"
   ],
   "files": [
-    "SKILL.md",
-    "AGENTS-section.md",
-    "coding-foundations-reference.md",
-    "database-reference.md",
-    "system-architecture-reference.md",
-    "operability-reference.md",
-    "documentation-reference.md",
-    "user-interface-reference.md",
-    "change-safety-reference.md",
-    "testing-reference.md",
-    "enforcement-reference.md",
+    "skill",
     "doctrine.json",
     "README.md",
     "LICENSE",

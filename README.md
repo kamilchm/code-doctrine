@@ -34,17 +34,17 @@ npx code-doctrine install kamilchm pi
 
 ## What this package contains
 
-- `SKILL.md`
-- `AGENTS-section.md`
-- focused doctrine reference docs
+- `skill/` — all installable doctrine files
 - `doctrine.json` — the doctrine manifest used by the shared client
+- root package metadata and documentation for publishing and reuse
 
 ## Standard notes
 
-This package follows the v1 `code-doctrine` convention:
+This package follows the v2 `code-doctrine` convention:
 
 - npm package name: `@kamilchm/code-doctrine`
 - doctrine manifest: `doctrine.json`
+- doctrine skill root: `skill/`
 - doctrine skill name: `code-doctrine`
 
 ## Local validation
