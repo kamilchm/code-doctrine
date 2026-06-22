@@ -32,6 +32,7 @@ Use this note when the task is mainly about code shape, abstraction level, parsi
 - Avoid passing unparsed maps, strings, and loosely shaped payloads deep into the system.
 - Do not repeat the same validation in every layer when it should have happened once.
 - Make illegal states hard to represent.
+- Prefer enum, union, sum, or sealed variant types for mutually exclusive shapes instead of one struct or object with many optional fields.
 
 ## Structure
 

@@ -14,7 +14,7 @@ Use this note when planning work, reviewing code, or deciding whether a change i
 
 - Specify and implement the simplest architecture that fits the slice.
 - Separate domain failures from operational failures.
-- Parse inputs at boundaries and preserve rich error context.
+- Parse inputs at boundaries, model variants with enum/union types instead of optional-field bags, and preserve rich error context.
 - Keep interfaces narrow and package placement domain-centered.
 - Expose meaningful capabilities through commands or command-shaped operations, keeping HTTP, UI, automation, and jobs thin.
 - Use SQL persistence by default unless a concrete requirement justifies otherwise.
@@ -42,6 +42,7 @@ Reject or revise a change when materially present:
 - abstraction or indirection increased without a real boundary or reuse need
 - simple functions bury the happy path under nested edge-case handling
 - validation is repeated downstream instead of parsing once at the boundary
+- mutually exclusive states are represented as one optional-field struct/object instead of enum/union variants
 - dependencies or framework concepts leak into core domain code
 - one clear user action is fragmented across handlers or calls when one command-shaped operation fits better
 - non-SQL persistence, separate queues, or workflow systems are introduced without concrete need
@@ -68,6 +69,7 @@ Before accepting a design or implementation, ask:
 - Are expected domain failures modeled separately from operational failures?
 - Are operational failures surfaced with enough context to debug?
 - Are boundaries clear, with parsing and validation at the edges?
+- Are mutually exclusive domain shapes represented as enum/union variants rather than optional-field bags?
 - For simple functions, is the happy path still visible at top-level indentation?
 - If there is only one implementation and caller, did we avoid unnecessary interfaces?
 - Does dependency structure follow the domain instead of the framework?
