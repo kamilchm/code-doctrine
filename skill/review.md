@@ -32,6 +32,7 @@ Use this note when planning work, reviewing code, or deciding whether a change i
 - Prefer additive, rollout-safe live changes with explicit migrations, backfills, and repairs.
 - Keep docs lean and user-facing; update them when commands, workflows, requirements, or critical limitations change.
 - Keep screens task-focused, simple, and progressively disclosed.
+- For bugs found in a running system, reproduce the observed failure in a failing regression test before preparing the fix, then verify that test passes after the fix.
 - Add high-signal tests at realistic boundaries.
 
 ## Review gates
@@ -57,6 +58,7 @@ Reject or revise a change when materially present:
 - docs mirror volatile internals, omit critical limitations, or fail to change with user-facing behavior
 - screens are overloaded, generic, distracting, or split routine workflows across unnecessary steps
 - live-system changes assume unsafe rollout, migration, or version synchronization behavior
+- a bug fix lacks a regression test that reproduces the observed running-system failure, unless the change explains why exact reproduction was not practical and adds the closest trustworthy test
 - tests are coverage-driven, mock-heavy, or miss important workflows and real regressions
 
 Pass with notes when the issue is stylistic or mild and does not materially harm maintainability, safety, or operability.
@@ -80,6 +82,7 @@ Before accepting a design or implementation, ask:
 - If the change touches live behavior, is rollout, migration, backfill, repair, and compatibility safe and explicit?
 - Did docs change where commands, workflows, requirements, or critical limitations changed?
 - Is the UI focused on the primary user task with progressive disclosure of complexity?
+- For bug fixes, did a regression test fail on the observed bug before the fix and pass after it?
 - Do tests prove important behavior at realistic boundaries?
 
 If the answer is no to any material question, revise the plan, implementation, or review verdict.
